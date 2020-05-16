@@ -10,3 +10,19 @@
 
 const redundantArray = [1, 1, 2, 3, 3, 4]
 // YOUR CODE HERE
+
+let i = 0;
+let empty = [];
+while(i < redundantArray.length){
+     empty = [...new Set(redundantArray)];
+    i++
+}
+document.write(empty)
+
+// let i = 0;
+// let empty = [];
+// while(i < redundantArray.length){
+     
+//     i++
+// }
+// document.write(empty)
