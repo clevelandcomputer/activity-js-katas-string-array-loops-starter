@@ -20,3 +20,36 @@
 */
 
 // YOUR CODE HERE
+
+const insertWord = document.querySelector('#user-input');
+const insertLetter = document.querySelector('#search-letter');
+const text = document.querySelector('#text');
+const search = document.querySelector('#search');
+
+
+search.addEventListener('click', function(){
+
+
+let word = insertWord.value.toLowerCase();
+let letter = insertLetter.value.toLowerCase();
+
+let newLetterCounter = 0;
+let i = 0;
+while (i < word.length){
+   let wordToArray = word.split("");
+   let foundWord = wordToArray[i].includes(letter);
+   if (foundWord === true){
+      newLetterCounter += 1;
+   }
+   
+   i++;
+}
+
+if (newLetterCounter > 0){
+text.innerHTML = 'The letter ' + letter + ' exists ' + newLetterCounter + ' times in this word!'
+} else {
+   text.innerHTML = 'Nope, that letter doesn\'t exist in the word!'
+}
+
+
+})
