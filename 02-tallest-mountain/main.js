@@ -9,3 +9,19 @@
 */
 
 // YOUR CODE HERE
+
+
+let tops = [14478, 22348, 17464, 47894, 32331, 11746]
+
+let i = 0;
+let highest = 0;
+
+while (i < tops.length){
+   if(highest < tops[i]){
+      highest = tops[i];
+   }
+
+   i++
+}
+
+document.write(highest)
